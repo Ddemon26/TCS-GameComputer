@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace TCS {
     public class DoorController : MonoBehaviour {
+        [SerializeField] CameraTempSwap m_cameraTempSwap;
         public enum DoorState { Open, Closed }
         public DoorState m_doorState = DoorState.Closed;
 
@@ -22,6 +23,8 @@ namespace TCS {
 
             m_doorState = DoorState.Open;
             m_audioSource.Play();
+            
+            m_cameraTempSwap.SwapToTempCamera();
         }
 
         public void CloseDoor() {
@@ -29,6 +32,8 @@ namespace TCS {
 
             m_doorState = DoorState.Closed;
             m_audioSource.Play();
+            
+            m_cameraTempSwap.SwapToTempCamera();
         }
 
         void Update() {
