@@ -1,6 +1,7 @@
 * {
     color: rgb(107, 219, 59);
     letter-spacing: 10px;
+    -unity-font-definition: url("project://database/Assets/TCS-PackageSystems/TCS-GameComputer/TCS%20GameComputer/Runtime/Pixelfont%201/pixelfont.ttf?fileID=12800000&guid=14eface056fd2364fadf0fbe0b9f43b1&type=3#pixelfont");
 }
 
 :root {
@@ -41,5 +42,5 @@
 
 .unity-label {
     white-space: pre-wrap;
-    font-size: 8px;
+    font-size: 15px;
 }
