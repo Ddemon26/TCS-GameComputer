@@ -123,8 +123,8 @@ namespace TCS {
         public async Task AddOutput(string message) {
             var newLabel = new Label(message) {
                 style = {
-                    fontSize = m_textSize
-                }
+                    fontSize = m_textSize,
+                },
             };
             m_scrollView.Add(newLabel);
 
