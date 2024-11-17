@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TCS {
+namespace TCS.GameComputer {
     public class DoorController : MonoBehaviour {
         [SerializeField] CameraTempSwap m_cameraTempSwap;
         public enum DoorState { Open, Closed }

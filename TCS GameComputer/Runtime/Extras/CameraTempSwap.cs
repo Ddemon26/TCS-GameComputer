@@ -1,10 +1,9 @@
-using System;
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 #endif
 using UnityEngine;
 
-namespace TCS {
+namespace TCS.GameComputer {
     [RequireComponent(typeof(Camera))]
     public class CameraTempSwap : MonoBehaviour {
         [Header("Temp Camera")]
@@ -33,13 +32,14 @@ namespace TCS {
         }
 
         void Update() {
-            if (m_tempCameraActive) {
-                m_tempCameraTimer -= Time.deltaTime;
-                if (m_tempCameraTimer <= 0.0f) {
-                    m_tempCamera.enabled = false;
-                    m_tempCameraActive = false;
-                }
-            }
+            if (!m_tempCameraActive) return;
+            
+            m_tempCameraTimer -= Time.deltaTime;
+            
+            if (!(m_tempCameraTimer <= 0.0f)) return;
+            
+            m_tempCamera.enabled = false;
+            m_tempCameraActive = false;
         }
 
 #if ODIN_INSPECTOR

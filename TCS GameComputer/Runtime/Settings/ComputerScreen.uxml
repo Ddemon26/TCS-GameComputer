@@ -10,7 +10,7 @@
         </engine:VisualElement>
         <engine:VisualElement style="flex-grow: 0; flex-shrink: 0;">
             <engine:VisualElement style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
-            <engine:TextField placeholder-text="&gt;" />
+            <engine:TextField placeholder-text="&gt;" picking-mode="Ignore" select-all-on-focus="false" select-all-on-mouse-up="false" select-word-by-double-click="false" select-line-by-triple-click="false" />
         </engine:VisualElement>
         <engine:ProgressBar value="22" title="Loading..." style="position: absolute; top: 50%; right: 33%; left: 33%; display: none;" />
     </engine:VisualElement>
