@@ -20,11 +20,16 @@ namespace TCS.GameComputer {
         [SerializeField] Camera m_screenFocusCamera;
 
         void Awake() {
-            if (!m_uiDocument) { Debug.LogError("Missing UIDocument component."); return; }
+            if (!m_uiDocument) { Logger.LogError("Missing UIDocument component."); return; }
             
-            if (!m_screenFocusCamera) { Debug.LogError("Missing Camera component for screen focus."); return; }
-            Logger.LogToDo("Add a way to focus on the screen when the console is opened.");
-
+            if (!m_screenFocusCamera) { Logger.LogError("Missing Camera component for screen focus."); return; }
+            Logger.LogTODO("Add a way to focus on the screen when the console is opened.");
+            // Logger.LogError("GameComputerHud is not fully implemented yet.");
+            // Logger.LogException("GameComputerHud is not fully implemented yet.");
+            // Logger.LogWarning("GameComputerHud is not fully implemented yet.");
+            // Logger.Log("GameComputerHud is not fully implemented yet.");
+            // Logger.LogAssert("GameComputerHud is not fully implemented yet.");
+            
             m_gameTerminal = new GameTerminal(m_uiDocument, m_textSize);
 
             foreach (var cmd in m_commands) {
@@ -42,7 +47,7 @@ namespace TCS.GameComputer {
                 await m_gameTerminal.AddOutput("> Type 'help' to see available commands.");
             }
             catch (Exception e) {
-                Debug.LogError($"An error occurred during initialization: {e.Message}");
+                Logger.LogError($"An error occurred during initialization: {e.Message}");
             }
         }
 
