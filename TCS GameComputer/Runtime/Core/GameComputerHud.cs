@@ -24,11 +24,6 @@ namespace TCS.GameComputer {
             
             if (!m_screenFocusCamera) { Logger.LogError("Missing Camera component for screen focus."); return; }
             Logger.LogTODO("Add a way to focus on the screen when the console is opened.");
-            // Logger.LogError("GameComputerHud is not fully implemented yet.");
-            // Logger.LogException("GameComputerHud is not fully implemented yet.");
-            // Logger.LogWarning("GameComputerHud is not fully implemented yet.");
-            // Logger.Log("GameComputerHud is not fully implemented yet.");
-            // Logger.LogAssert("GameComputerHud is not fully implemented yet.");
             
             m_gameTerminal = new GameTerminal(m_uiDocument, m_textSize);
 
